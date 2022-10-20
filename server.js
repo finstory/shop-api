@@ -106,9 +106,11 @@ server.get('/reset', (req, res) => {
 // To handle POST, PUT and PATCH you need to use a body-parser
 // You can use the one used by JSON Server
 
+const port = process.env.PORT || 3001;
+
 // Use default router
 server.use(router)
-server.listen(3001, () => {
+server.listen(port, () => {
     console.log('JSON Server is running')
 })
 
